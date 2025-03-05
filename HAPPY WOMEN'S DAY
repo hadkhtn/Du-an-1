@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc mừng 8/3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe4e1;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+        .container {
+            margin: 20px auto;
+            width: 80%;
+            transform: rotateY(10deg);
+        }
+        .person {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transform: rotateY(-10deg);
+            transition: transform 0.3s;
+        }
+        .person:hover {
+            transform: scale(1.05) rotateY(0deg);
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        @keyframes floatingHearts {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            50% { transform: translateY(-50px) scale(1.2); opacity: 0.7; }
+            100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
+        }
+        .heart {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            color: red;
+            font-size: 24px;
+            animation: floatingHearts 3s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chúc mừng ngày 8/3!</h1>
+    <div class="container">
+        <div class="person">
+            <img src="image1.png" alt="Phương Linh">
+            <h2>Phương Linh</h2>
+            <p>Chúc Linh luôn xinh đẹp, rạng rỡ như bông hoa hướng dương và đỗ Nguyện Vọng 1 một cách thần tốc!</p>
+        </div>
+        <div class="person">
+            <img src="image2.png" alt="Phương Anh">
+            <h2>Phương Anh</h2>
+            <p>Chúc bạn luôn vui vẻ, xinh xắn, học hành suôn sẻ và trúng tủ mọi đề thi để đỗ Nguyện Vọng 1 nhé!</p>
+        </div>
+        <div class="person">
+            <img src="image3.png" alt="Thuỳ Linh">
+            <h2>Thuỳ Linh</h2>
+            <p>Chúc Linh trở thành học thần tiếng Anh, luôn gặp may mắn và đỗ Nguyện Vọng 1 ngon lành!</p>
+        </div>
+        <div class="person">
+            <img src="image4.png" alt="Tạ Tâm">
+            <h2>Tạ Tâm</h2>
+            <p>Chúc Tâm học hành như thần, bài kiểm tra chỉ có điểm 10 và đỗ Nguyện Vọng 1 như một cú one-shot!</p>
+        </div>
+        <div class="person">
+            <img src="image5.png" alt="Ngọc Huế">
+            <h2>Ngọc Huế</h2>
+            <p>Chúc Huế luôn tươi cười, không bị ai giành mất trà sữa và đỗ Nguyện Vọng 1 nhẹ nhàng như ăn kẹo!</p>
+        </div>
+        <div class="person">
+            <img src="image6.png" alt="Thuỳ Treng">
+            <h2>Thuỳ Treng</h2>
+            <p>Chúc Treng luôn cool ngầu, khí chất ngời ngời và đỗ Nguyện Vọng 1 một cách hoành tráng!</p>
+        </div>
+        <div class="person">
+            <img src="image7.png" alt="Dyne">
+            <h2>Dyne</h2>
+            <p>Chúc Dyne học hành đỉnh cao, thi gì trúng đó và Nguyện Vọng 1 chỉ là chuyện nhỏ!</p>
+        </div>
+        <div class="person">
+            <img src="image8.png" alt="Lưu Thơm">
+            <h2>Lưu Thơm</h2>
+            <p>Chúc Thơm ngọt ngào như cái tên, luôn rạng rỡ và đỗ Nguyện Vọng 1 không cần chờ đợi!</p>
+        </div>
+        <div class="person">
+            <img src="image9.png" alt="Hương Giang">
+            <h2>Hương Giang</h2>
+            <p>8/3 vui vẻ nha Giang! Chúc bạn luôn xinh đẹp, trúng đề mọi môn và đỗ Nguyện Vọng 1 cực kỳ mượt mà!</p>
+        </div>
+    </div>
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 3000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
